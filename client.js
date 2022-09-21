@@ -26,11 +26,7 @@ bgm.volume = 0.1;
 canvas.width = 640;
 canvas.height = 480;
 
-const socket = io.connect("http://152.70.66.250:25568", {
-    extraHeaders: {
-        referrerPolicy: "unsafe_url" 
-    }
-})
+const socket = io.connect("https://dragonacademia.tk:25568");
 
 class People {
     constructor(game, x, y, src) {
