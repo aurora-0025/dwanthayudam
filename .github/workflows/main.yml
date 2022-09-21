@@ -3,12 +3,7 @@
 name: Fly Deploy
 
 # Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "client" branch
-  push:
-    branches: [ "server" ]
-  pull_request:
-    branches: [ "server" ]
+on: [push]
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 jobs:
