@@ -26,7 +26,7 @@ bgm.volume = 0.1;
 canvas.width = 640;
 canvas.height = 480;
 
-const socket = io.connect("http://panel.dragonacademia.tk:25568");
+const socket = io.connect("152.70.66.250:25568");
 
 class People {
     constructor(game, x, y, src) {
