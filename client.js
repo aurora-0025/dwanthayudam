@@ -26,7 +26,7 @@ bgm.volume = 0.1;
 canvas.width = 640;
 canvas.height = 480;
 
-const socket = io.connect("panel.dragonacademia.tk:25568/");
+const socket = io.connect("dwanthayudam.fly.dev");
 
 class People {
     constructor(game, x, y, src) {
