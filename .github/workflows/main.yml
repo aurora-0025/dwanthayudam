@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Fly Deploy
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "client" branch
+  push:
+    branches: [ "server" ]
+  pull_request:
+    branches: [ "server" ]
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: superfly/flyctl-actions@1.1
+        with:
+          args: "deploy"
